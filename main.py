@@ -1,4 +1,4 @@
-from calculadora import sumar, restar, multiplicar, dividir
+from calculadora import sumar, restar, multiplicar, dividir, potenciar
 
 def pedir_numeros():
     a = float(input("Ingrese el primer número: "))
@@ -10,6 +10,7 @@ def menu():
     print("2. Restar")
     print("3. Multiplicar")
     print("4. Dividir")
+    print("5. Potenciación")
     print("0. Salir")
 
 def main():
@@ -37,6 +38,10 @@ def main():
                     print("No se puede dividir entre 0")
                 else:
                     print("Resultado:", dividir(a, b))
+
+            case "5":
+                a, b = pedir_numeros()
+                print("Resultado:", potenciar(a, b))
 
             case "0":
                 print("Programa finalizado")
